@@ -1,0 +1,52 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-co: blueviolet;
+}
+body {
+    background-color:grey;
+}
+.top {
+    text-align: center;
+    margin-top: 25px;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.section {
+    border-style: dotted;
+    color: purple;
+    border-color: white;
+    
+    ;
+}
+
+.row {
+    border-style: solid;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    margin-top: -20px;
+    background-color: gray;
+
+}
+
+p.code {
+    color: white;
+}
+.code {
+    border-style: solid;
+    color: purple 
+    background-color: linear-gradient(
+        rgba(232, 102, 236, 0.3) 100%
+        rgba(232, 102, 236, 0.6) 100%;
+}
+
+.main .section .row .code {
+    background-color: 
+    );
+}
