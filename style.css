@@ -1,9 +1,15 @@
+:root {
+    --darkgray: #33393f;
+    --brightpurple: #e866ec;
+}
 * {
     font-family: 'Courier New', Courier, monospace;
-    font-co: blueviolet;
+}
+h1 {
+    color: var(--brightpurple);
 }
 body {
-    background-color:grey;
+    background-color: var(--darkgray);
 }
 .top {
     text-align: center;
@@ -13,40 +19,97 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    padding: 30px;
+    position: relative;
+    row-gap: 50px;
+    
 }
-
+nav {
+    color: white;
+    margin-bottom: 50px;
+}
 .section {
     border-style: dotted;
-    color: purple;
+    color: var(--brightpurple);
     border-color: white;
-    
-    ;
-}
+    max-width: 25%; 
+    display: grid;
+    column-gap: 50px;
 
+}
+p.text {
+    
+  
+}
+h2 {
+    line-height: 1.0;
+}
 .row {
     border-style: solid;
     font-weight: bold;
     border-radius: 10px;
     position: relative;
-    margin-top: -20px;
-    background-color: gray;
+    margin-top: -30px;
+    background-color: var(--darkgray);
+    padding: 10px;
+    height: fit-content;
+    border-color: white;
 
 }
+.section .row {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.section:hover,
+.section:hover .row {
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+}
 
-p.code {
+p {
+    color: var(--brightpurple);
+    line-height: 1.0;
+    margin: 0%;
+
+}
+code {
+    display: flex;
     color: white;
+    white-space: pre-wrap;
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+}
+
+code  
+pre {
+    justify-content: left;
+    text-align: left;
+    align-items:flex-start;
+    
 }
 .code {
+    
+    overflow: auto;
     border-style: solid;
-    color: purple 
-    background-color: linear-gradient(
-        rgba(232, 102, 236, 0.3) 100%
-        rgba(232, 102, 236, 0.6) 100%;
+    
 }
 
-.main .section .row .code {
-    background-color: 
+.code.code {
+    background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
     );
+    border-radius: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    * {
+    max-width: 100%;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
+  }
