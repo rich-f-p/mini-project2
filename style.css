@@ -84,13 +84,16 @@ code {
     monospace;
 }
 
-code  
-pre {
-    justify-content: left;
-    text-align: left;
-    align-items:flex-start;
-    
+
+pre code:active {
+    user-select: all;
 }
+
+::selection {
+    background-color: aqua;
+    color: var(--darkgray);
+}
+
 .code {
     
     overflow: auto;
@@ -106,10 +109,17 @@ pre {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    * {
-    max-width: 100%;
-      flex-wrap: wrap;
-      flex-grow: 1;
+@media screen and (max-width: 770px) {
+    section {
+        display:flex
+        flex: 1 0 50%;
+      }
+
+
+@media screen and (max-width: 700px) {
+    section {
+        display: flex;
+        flex: 1 0 90%;
+        flex-wrap: wrap;
     }
-  }
+}
